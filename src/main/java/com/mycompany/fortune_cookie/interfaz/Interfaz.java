@@ -4,7 +4,7 @@
  */
 package com.mycompany.fortune_cookie.interfaz;
 
-import java.util.Random;
+import com.mycompany.fortune_cookie.Fortune_Cookie;
 
 /**
  *
@@ -86,32 +86,13 @@ public class Interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-    String [] frases  = {"Un nuevo par de zapatos te hará mucho bien.",
-    "Un momento emocionante está en su futuro inmediato.",
-    "Evite hacer apuestas innecesarias.",
-    "Hacer o no hacer. Aquí no hay intentos.",
-    "¿Sientes que estás caminando en el barro? Tómate tu tiempo hoy.",
-    "Cada salida es una entrada a nuevas experiencias.",
-    "Ignora la cookie anterior.",
-    "El matrimonio te permite molestar a una persona especial por el resto de tu vida.",
-    "Quizás puedas vivir en la luna en el próximo siglo.",
-    "Nunca se burle de un enano armado chocando los cinco.",
-    "Escuche solamente la galleta de la fortuna; ignore todas las demás unidades de adivinación.",
-    "Algunas galletas de la fortuna no contienen fortuna.",
-    "La fortuna que buscas está en otra galleta.",
-    "Las bandas de goma se dirigen en la dirección correcta.",
-    "El tiempo cura todas las heridas. Mantener la cabeza en alto.",
-    "Hoy es probablemente una gran mejora con respecto a ayer."}; 
-
-        Random random = new Random();
-        int r = random.nextInt(frases.length);
-        jTextField1.setText(frases[r]);      
-
+           
+        Fortune_Cookie llamada = new Fortune_Cookie();
+           llamada.frase();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-
+    
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
@@ -152,6 +133,6 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
