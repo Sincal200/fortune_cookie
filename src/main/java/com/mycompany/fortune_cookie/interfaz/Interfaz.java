@@ -4,6 +4,8 @@
  */
 package com.mycompany.fortune_cookie.interfaz;
 
+import java.util.Random;
+
 /**
  *
  * @author 37178
@@ -34,8 +36,18 @@ public class Interfaz extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Generar Frase");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Galleta de la Fortuna");
@@ -44,10 +56,6 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(84, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -57,6 +65,10 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,6 +84,35 @@ public class Interfaz extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+    String [] frases  = {"Un nuevo par de zapatos te hará mucho bien.",
+    "Un momento emocionante está en su futuro inmediato.",
+    "Evite hacer apuestas innecesarias.",
+    "Hacer o no hacer. Aquí no hay intentos.",
+    "¿Sientes que estás caminando en el barro? Tómate tu tiempo hoy.",
+    "Cada salida es una entrada a nuevas experiencias.",
+    "Ignora la cookie anterior.",
+    "El matrimonio te permite molestar a una persona especial por el resto de tu vida.",
+    "Quizás puedas vivir en la luna en el próximo siglo.",
+    "Nunca se burle de un enano armado chocando los cinco.",
+    "Escuche solamente la galleta de la fortuna; ignore todas las demás unidades de adivinación.",
+    "Algunas galletas de la fortuna no contienen fortuna.",
+    "La fortuna que buscas está en otra galleta.",
+    "Las bandas de goma se dirigen en la dirección correcta.",
+    "El tiempo cura todas las heridas. Mantener la cabeza en alto.",
+    "Hoy es probablemente una gran mejora con respecto a ayer."}; 
+
+        Random random = new Random();
+        int r = random.nextInt(frases.length);
+        jTextField1.setText(frases[r]);      
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
