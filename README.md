@@ -7,5 +7,5 @@ Evidencia de Ejecución: https://drive.google.com/file/d/1JBFs_8BpkOt6UYgrD_imgE
 
 ------------------------------------------------------------
 
-Diagrama de Clases : 
+Diagrama de Clases : https://drive.google.com/file/d/1bxuwyHLWEJPxb5hoSn9D72OWRhpM9dvx/view?usp=sharing
 
